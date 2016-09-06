@@ -19,13 +19,25 @@ while len(stack) > 0:
     print(current_node)
     # look up
     if graph[int(current_node[0]) + 1][int(current_node[1])] == '-':
-        stack.append([str(int(current_node[0]) + 1) + ', ' + str(current_node[1])])
+        new_node = []
+        new_node.append(str(int(current_node[0]) + 1))
+        new_node.append(str(current_node[1]))
+        stack.append(new_node)
     #look left
     if graph[int(current_node[0])][int(current_node[1]) - 1] == '-':
-        stack.append([str(current_node[0]) + ', ' + str(int(current_node[1]) - 1)])
+        new_node = []
+        new_node.append(str(current_node[0]))
+        new_node.append(str(int(current_node[1]) - 1))
+        stack.append(new_node)
     #look right
     if graph[int(current_node[0])][int(current_node[1]) + 1] == '-':
-        stack.append([str(current_node[0]) + ', ' + str(int(current_node[1]) + 1)])
+        new_node = []
+        new_node.append(str(current_node[0]))
+        new_node.append(str(int(current_node[1]) + 1))
+        stack.append(new_node)
     #look down
     if graph[int(current_node[0]) - 1][int(current_node[1])] == '-':
-        stack.append([str(int(current_node[0]) -1 ) + ', ' + str(current_node[1])])
+        new_node = []
+        new_node.append(str(int(current_node[0]) - 1))
+        new_node.append(str(current_node[1] ))
+        stack.append(new_node)
