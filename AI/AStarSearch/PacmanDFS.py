@@ -1,4 +1,4 @@
-pacman_position = input().split()
+start_position = input().split()
 food_position = input().split()
 graph_dimensions = input().split()
 
@@ -10,7 +10,7 @@ nodes_explored = 0
 stack = []
 
 # push the starting node
-stack.append(pacman_position)
+stack.append(start_position)
 
 # push the visitable neigbors
 while len(stack) > 0:
