@@ -4,7 +4,7 @@ graph_dimensions = input().split()
 
 graph = []
 for rows in range(0, int(graph_dimensions[0])):
-    graph.append(list(input()))
+    graph.append((list(input()), False))
 
 nodes_explored = 0
 stack = []
